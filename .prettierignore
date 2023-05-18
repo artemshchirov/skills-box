@@ -1,0 +1,12 @@
+/.next
+node_modules
+
+/build
+/dist
+/public/build
+
+.env
+
+/styles
+
+/docs
