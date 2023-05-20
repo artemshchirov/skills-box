@@ -1,11 +1,10 @@
 'use client';
 
 import React from 'react';
-import { Button } from 'primereact/button';
 import Image from 'next/image';
+import { Button } from 'primereact/button';
 import PrimeReact from 'primereact/api';
-
-import logo from '../../public/next.svg';
+import logo from '../../../public/next.svg';
 import Language from './Language';
 import Nav from './Nav';
 

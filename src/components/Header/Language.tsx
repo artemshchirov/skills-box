@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import type { DropdownChangeEvent, DropdownProps } from 'primereact/dropdown';
 import { Dropdown } from 'primereact/dropdown';
-import Image from 'next/image';
 import ua from '@/assets/ua.svg';
 import ru from '@/assets/ru.svg';
 import he from '@/assets/he.svg';

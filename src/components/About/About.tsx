@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import type { GalleriaResponsiveOptions } from 'primereact/galleria';
-import { Galleria } from 'primereact/galleria';
 import Image from 'next/image';
+import { Galleria } from 'primereact/galleria';
+import type { GalleriaResponsiveOptions } from 'primereact/galleria';
 import { Button } from 'primereact/button';
-import PhotoService from '@/services/Galleria';
-import type { PhotoData } from '@/services/Galleria';
 import Section from '@/components/Section';
+import PhotoService from './Galleria';
+import type { PhotoData } from './Galleria';
 
 export default function About() {
   const [images, setImages] = useState<PhotoData[]>([]);
@@ -30,7 +30,7 @@ export default function About() {
     PhotoService.getImages().then((data: PhotoData[]) => setImages(data));
   }, []);
 
-  const itemTemplate = (item: any) => {
+  const itemTemplate = (item: PhotoData) => {
     return (
       <Image
         width="0"
@@ -43,7 +43,7 @@ export default function About() {
     );
   };
 
-  const thumbnailTemplate = (item: any) => {
+  const thumbnailTemplate = (item: PhotoData) => {
     return (
       <Image
         width="0"
