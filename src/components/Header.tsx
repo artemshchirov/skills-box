@@ -15,12 +15,11 @@ import Nav from './Nav';
 
 export default function Header() {
   PrimeReact.ripple = true;
-
   return (
-    <header className="px-6 col-12 gap-6 grid grid-nogutter container flex justify-content-center align-items-center">
-      <Image className="col col-fixed " src={logo} alt="logo" width={143} height={40} />
+    <header className="px-6 py-3 gap-6 grid grid-nogutter flex align-items-center">
+      <Image className="col col-fixed" src={logo} alt="logo" width={143} height={40} />
       <Nav />
-      <div className="flex flex-wrap justify-content-center gap-3">
+      <div className="col flex justify-content-end gap-3">
         <Button
           icon="pi pi-instagram"
           rounded
@@ -46,6 +45,10 @@ export default function Header() {
           aria-label="WhatsApp"
         />
       </div>
+      <p className="col-1 flex align-items-center gap-2">
+        <i className="pi pi-phone" />
+        0584441705
+      </p>
       <Language />
     </header>
   );

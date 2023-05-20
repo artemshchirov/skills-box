@@ -2,22 +2,17 @@ import React from 'react';
 import { Button } from 'primereact/button';
 
 export default function Nav() {
+  const buttonStyle = { boxShadow: 'none' };
   return (
-    <nav className="col card pl-3 flex flex-wrap justify-content-start w-full gap-3">
-      <Button
-        size="small"
-        label="Home"
-        icon="pi pi-home"
-        style={{ boxShadow: 'none', outline: 'none', color: 'black' }}
-        text
-      />
-      <Button
-        size="small"
-        label="Delivery"
-        icon="pi pi-box"
-        style={{ boxShadow: 'none', outline: 'none', color: 'black' }}
-        text
-      />
+    <nav className="col ">
+      <ul className="list-none flex gap-3">
+        <li>
+          <Button severity="help" label="Skills" icon="pi pi-star" style={buttonStyle} text />
+        </li>
+        <li>
+          <Button severity="help" label="Delivery" icon="pi pi-truck" style={buttonStyle} text />
+        </li>
+      </ul>
     </nav>
   );
 }

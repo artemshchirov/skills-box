@@ -5,8 +5,8 @@ import { Poppins } from 'next/font/google';
 import Header from '@/components/Header';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
-// import './globals.css';
 import 'primereact/resources/primereact.min.css';
+import './globals.css';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800', '900'] });
 
