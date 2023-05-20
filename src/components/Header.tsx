@@ -9,10 +9,6 @@ import logo from '../../public/next.svg';
 import Language from './Language';
 import Nav from './Nav';
 
-// type HeaderProps = {
-//   classNameProp?: string | undefined;
-// };
-
 export default function Header() {
   PrimeReact.ripple = true;
   return (
