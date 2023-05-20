@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Button } from 'primereact/button';
-import welcomeImage from '../assets/space.jpg';
+import welcomeImage from '@/assets/space.jpg';
 
 export default function Home() {
   return (
