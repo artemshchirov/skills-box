@@ -3,7 +3,8 @@
 import React from 'react';
 import { Divider } from 'primereact/divider';
 import Section from '@/components/Section';
-import Steps from '@/components/Steps';
+import Steps from './Steps';
+import Step from './Step';
 
 type Step = {
   name: string;
@@ -47,7 +48,7 @@ export default function Info() {
       </Divider>
       <Steps className="grid">
         {steps.map((step) => (
-          <li
+          <Step
             key={step.name}
             className="col-12 md:col-6 lg:col-3 mb-4 px-5 flex flex-column align-items-start"
           >
@@ -56,7 +57,7 @@ export default function Info() {
             </span>
             <div className="text-900 text-xl mb-3 font-medium">{step.name}</div>
             <span className="text-700 line-height-3 text-left">{step.description}</span>
-          </li>
+          </Step>
         ))}
       </Steps>
     </Section>

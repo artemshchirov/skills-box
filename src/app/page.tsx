@@ -1,6 +1,7 @@
-import About from '@/components/About';
+import About from '@/components/About/About';
 import Launch from '@/components/Launch';
-import Info from '@/components/Info';
+import Info from '@/components/Info/Info';
+import ProductsView from '../components/ProductsView/ProductsView';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Launch />
       <About />
       <Info />
+      <ProductsView />
     </main>
   );
 }
