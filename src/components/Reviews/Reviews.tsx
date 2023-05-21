@@ -9,10 +9,10 @@ import productTemplate from '@/assets/space.jpg';
 import Container from '../Container';
 import Review from './Review';
 import reviews from './reviewsData';
-
+// TODO rename ReviewsView
 export default function Reviews() {
   return (
-    <Section className="surface-ground px-4 py-8 md:px-6 lg:px-8">
+    <Section className="surface-ground px-4 py-8 md:px-6">
       <h2 className="text-900 font-medium text-2xl mb-5">Your Voice</h2>
       <ul className="list-none grid -mt-3 -ml-3 -mr-3">
         {reviews.map((review) => (

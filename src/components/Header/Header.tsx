@@ -11,7 +11,7 @@ import Nav from './Nav';
 export default function Header() {
   PrimeReact.ripple = true;
   return (
-    <header className="px-6 py-3 gap-6 grid grid-nogutter flex align-items-center">
+    <header className="gap-6 grid grid-nogutter flex align-items-center px-4 py-3 md:px-6">
       <Image className="col col-fixed" src={logo} alt="logo" width={143} height={40} />
       <Nav />
       <div className="col flex justify-content-end gap-3">

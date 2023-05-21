@@ -56,8 +56,24 @@ export default function About() {
     );
   };
   return (
-    <Section className="grid grid-nogutter surface-0 text-800">
-      <Section className="col-12 md:col-6 p-6 my-auto overflow-hidden h-full">
+    <Section className="grid grid-nogutter surface-ground px-4 py-8 md:px-6">
+      <Section className="col-12 md:col-6 p-6 sm:pt-0 text-center md:text-left flex align-items-center">
+        <div>
+          <span className="block text-5xl font-bold mb-1">
+            What is <br /> Skills Box?
+          </span>
+          <div className="text-xl text-primary font-semibold mb-3">Creative Workshop Set</div>
+          <p className="mt-0 mb-4 text-700 line-height-3">
+            We explore creative hobbies and package them both figuratively and literally. With each
+            set, we dive into a new hobby: finding experts, filming video tutorials, recording
+            podcasts, gathering all the necessary components, and adding a concise guide. You
+            don&apos;t need to spend hours searching for information - we&apos;ve already prepared
+            everything for a comfortable creative process.
+          </p>
+          <Button label="Learn More" type="button" className="mr-3 p-button-raised" />
+        </div>
+      </Section>
+      <Section className="col-12 md:col-6 m-auto">
         <Galleria
           value={images}
           responsiveOptions={responsiveOptions}
@@ -68,20 +84,6 @@ export default function About() {
           autoPlay
           transitionInterval={5000}
         />
-      </Section>
-
-      <Section className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center">
-        <div>
-          <span className="block text-6xl font-bold mb-1">SKILLS BOX</span>
-          <div className="text-6xl text-primary font-bold mb-3">Art for everyone</div>
-          <p className="mt-0 mb-4 text-700 line-height-3">
-            Ignite your creativity with our curated art boxes. Experience unique and fulfilling
-            artistic journeys. Perfect for seasoned artists or beginners, our boxes inspire and
-            ignite your passion for art.
-          </p>
-          <Button label="Learn More" type="button" className="mr-3 p-button-raised" />
-          <Button label="Live Demo" type="button" className="p-button-outlined" />
-        </div>
       </Section>
     </Section>
   );

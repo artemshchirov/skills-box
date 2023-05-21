@@ -45,7 +45,7 @@ const steps: Step[] = [
 
 export default function Info() {
   return (
-    <Section className="surface-section px-4 py-8 md:px-6 lg:px-8">
+    <Section className="surface-section px-4 py-8 md:px-6">
       <Container className="flex flex-wrap">
         <Steps className="flex flex-wrap">
           {steps.map((step) => (

@@ -19,7 +19,14 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${poppins.className}`} suppressHydrationWarning>
+      <body
+        className={`${poppins.className}`}
+        style={{
+          maxWidth: '1280px',
+          margin: 'auto',
+        }}
+        suppressHydrationWarning
+      >
         <Header />
         {children}
       </body>
