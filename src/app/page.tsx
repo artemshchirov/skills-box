@@ -1,8 +1,9 @@
 import About from '@/components/About/About';
-import Launch from '@/components/Launch';
+import Certificate from '@/components/Certificate';
 import Info from '@/components/Info/Info';
 import ProductsView from '@/components/ProductsView/ProductsView';
 import Reviews from '@/components/Reviews/Reviews';
+import Launch from '@/components/Launch';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Info />
       <ProductsView />
       <Reviews />
+      <Certificate />
     </main>
   );
 }
