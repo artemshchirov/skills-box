@@ -1,14 +1,13 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { Button } from 'primereact/button';
-import { DataView } from 'primereact/dataview';
-import { Rating } from 'primereact/rating';
-import { Tag } from 'primereact/tag';
+
 import Image from 'next/image';
+import { Button } from 'primereact/button';
+import Container from '@/components/Container';
 import Section from '@/components/Section';
 import productService from './ProductService';
-import type { Product } from './ProductService';
+import type { Product } from './productsData';
 
 export default function ProductsView() {
   const [products, setProducts] = useState<Product[]>([]);
@@ -17,61 +16,61 @@ export default function ProductsView() {
     productService.getProducts().then((data) => setProducts(data.slice(0, 12)));
   }, []);
 
-  const getSeverity = (product: Product) => {
-    switch (product.inventoryStatus) {
-      case 'INSTOCK':
-        return 'success';
-
-      case 'LOWSTOCK':
-        return 'warning';
-
-      case 'OUTOFSTOCK':
-        return 'danger';
-
-      default:
-        return null;
-    }
-  };
-
-  const gridItem = (product: Product) => {
-    return (
-      <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
-        <div className="p-4 border-1 surface-border surface-card border-round">
-          <div className="flex flex-wrap align-items-center justify-content-between gap-2">
-            <div className="flex align-items-center gap-2">
-              <i className="pi pi-tag" />
-              <span className="font-semibold">{product.category}</span>
-            </div>
-            <Tag value={product.inventoryStatus} severity={getSeverity(product)} />
-          </div>
-          <div className="flex flex-column align-items-center gap-3 py-5">
-            <Image
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="w-9 shadow-2 border-round h-auto"
-              src={product.image}
-              alt={product.name}
-            />
-            <div className="text-2xl font-bold">{product.name}</div>
-            <Rating value={product.rating} readOnly cancel={false} />
-          </div>
-          <div className="flex align-items-center justify-content-between">
-            <span className="text-2xl font-semibold">${product.price}</span>
-            <Button
-              icon="pi pi-shopping-cart"
-              className="p-button-rounded"
-              disabled={product.inventoryStatus === 'OUTOFSTOCK'}
-            />
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   return (
-    <Section className="w-full p-6">
-      <DataView value={products} itemTemplate={gridItem} layout="grid" />
+    <Section className="surface-section px-4 py-8 md:px-6 w-full">
+      <div className="grid -mt-3 -ml-3 -mr-3">
+        {products.map((product) => (
+          <div key={product.id} className="col-12 md:col-6 lg:col-3 mb-5 md:mb-0">
+            <div className="p-2">
+              <div className="relative mb-3">
+                <Image
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-full h-auto"
+                  src={product.image}
+                  alt={product.name}
+                />
+                <span
+                  className="bg-pink-500 text-pink-50 font-bold px-2 py-1 absolute border-round-2xl"
+                  style={{
+                    right: '1rem',
+                    bottom: '1rem',
+                  }}
+                >
+                  -%{product.discount}
+                </span>
+              </div>
+              <p className="text-900 font-medium text-xl">{product.name}</p>
+              <div className="mb-4">
+                <span className="line-through text-600">${product.oldPrice}.00</span>
+                <span className="font-bold text-900 ml-2">${product.price}.00</span>
+              </div>
+              <Container className="flex gap-2">
+                <div className="w-9">
+                  <Button
+                    type="button"
+                    label="Learn More"
+                    className="w-full"
+                    severity="info"
+                    aria-label="Add to Cart"
+                    icon="pi pi-search"
+                  />
+                </div>
+                <div className="w-3">
+                  <Button
+                    type="button"
+                    className="w-full"
+                    severity="danger"
+                    aria-label="Add to Cart"
+                    icon="pi pi-shopping-cart"
+                  />
+                </div>
+              </Container>
+            </div>
+          </div>
+        ))}
+      </div>
     </Section>
   );
 }
