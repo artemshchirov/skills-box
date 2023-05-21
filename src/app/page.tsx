@@ -4,6 +4,7 @@ import Info from '@/components/Info/Info';
 import ProductsView from '@/components/ProductsView/ProductsView';
 import Reviews from '@/components/Reviews/Reviews';
 import Launch from '@/components/Launch';
+import Questions from '@/components/Questions/Questions';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ProductsView />
       <Reviews />
       <Certificate />
+      <Questions />
     </main>
   );
 }
