@@ -1,7 +1,8 @@
 import About from '@/components/About/About';
 import Launch from '@/components/Launch';
 import Info from '@/components/Info/Info';
-import ProductsView from '../components/ProductsView/ProductsView';
+import Products from '@/components/Products/Products';
+import Reviews from '@/components/Reviews/Reviews';
 
 export default function Home() {
   return (
@@ -9,7 +10,8 @@ export default function Home() {
       <Launch />
       <About />
       <Info />
-      <ProductsView />
+      <Products />
+      <Reviews />
     </main>
   );
 }

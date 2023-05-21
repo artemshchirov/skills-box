@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'primefaces.org',
       },
+      {
+        protocol: 'https',
+        hostname: 'blocks.primereact.org',
+      },
     ],
   },
 }
