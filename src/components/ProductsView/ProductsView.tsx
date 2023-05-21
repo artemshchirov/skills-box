@@ -50,7 +50,7 @@ export default function ProductsView() {
               height="0"
               sizes="100vw"
               className="w-9 shadow-2 border-round h-auto"
-              src={`https://primefaces.org/cdn/primereact/images/product/${product.image}`}
+              src={product.image}
               alt={product.name}
             />
             <div className="text-2xl font-bold">{product.name}</div>
@@ -70,7 +70,7 @@ export default function ProductsView() {
   };
 
   return (
-    <Section className="p-6">
+    <Section className="w-full p-6">
       <DataView value={products} itemTemplate={gridItem} layout="grid" />
     </Section>
   );

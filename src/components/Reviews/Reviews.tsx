@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { Rating } from 'primereact/rating';
-import { Divider } from 'primereact/divider';
 import Image from 'next/image';
 import Section from '@/components/Section';
 import productsData from '@/components/ProductsView/productsData';

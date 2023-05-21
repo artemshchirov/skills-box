@@ -1,7 +1,7 @@
 import About from '@/components/About/About';
 import Launch from '@/components/Launch';
 import Info from '@/components/Info/Info';
-import Products from '@/components/Products/Products';
+import ProductsView from '@/components/ProductsView/ProductsView';
 import Reviews from '@/components/Reviews/Reviews';
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Launch />
       <About />
       <Info />
-      <Products />
+      <ProductsView />
       <Reviews />
     </main>
   );
