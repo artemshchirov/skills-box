@@ -6,6 +6,7 @@ import { Galleria } from 'primereact/galleria';
 import type { GalleriaResponsiveOptions } from 'primereact/galleria';
 import { Button } from 'primereact/button';
 import Section from '@/components/Section';
+import PageSection from '@/components/PageSection';
 import PhotoService from './GalleriaService';
 import type { PhotoData } from './GalleriaService';
 
@@ -56,7 +57,7 @@ export default function About() {
     );
   };
   return (
-    <Section className="grid grid-nogutter surface-ground px-4 py-8 md:px-6">
+    <PageSection className="grid grid-nogutter surface-ground">
       <Section className="col-12 md:col-6 p-6 sm:pt-0 text-center md:text-left flex align-items-center">
         <div>
           <span className="block text-5xl font-bold mb-1">
@@ -85,6 +86,6 @@ export default function About() {
           transitionInterval={5000}
         />
       </Section>
-    </Section>
+    </PageSection>
   );
 }

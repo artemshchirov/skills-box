@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { Button } from 'primereact/button';
 import launchImage from '@/assets/space.jpg';
 import Section from '@/components/Section';
+import PageSection from '@/components/PageSection';
 
 export default function Launch() {
   return (
-    <Section className="grid grid-nogutter surface-section px-4 pb-8 md:px-6">
+    <PageSection className="grid grid-nogutter surface-section">
       <Section className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center">
         <div>
           <h1 className="block text-6xl font-bold mb-1">SKILLS BOX</h1>
@@ -31,6 +32,6 @@ export default function Launch() {
           className="w-full h-auto md:ml-auto block md:h-full"
         />
       </Section>
-    </Section>
+    </PageSection>
   );
 }

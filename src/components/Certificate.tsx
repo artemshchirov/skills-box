@@ -5,10 +5,11 @@ import Image from 'next/image';
 import { Button } from 'primereact/button';
 import launchImage from '@/assets/space.jpg';
 import Section from '@/components/Section';
+import PageSection from '@/components/PageSection';
 
 export default function Certificate() {
   return (
-    <Section className="grid grid-nogutter surface-section px-4 py-8 md:px-6 w-full">
+    <PageSection className="grid grid-nogutter surface-ground">
       <Section className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
         <div>
           <h1 className="block text-5xl font-bold mb-1 mb-3">Gift Certificate</h1>
@@ -31,6 +32,6 @@ export default function Certificate() {
           className="w-full h-auto md:ml-auto block md:h-full"
         />
       </Section>
-    </Section>
+    </PageSection>
   );
 }
