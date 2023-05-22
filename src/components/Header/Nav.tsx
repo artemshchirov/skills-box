@@ -1,11 +1,15 @@
 import React from 'react';
 import { Button } from 'primereact/button';
 
-export default function Nav() {
+type NavProps = {
+  className?: string;
+};
+
+export default function Nav({ className }: NavProps): JSX.Element {
   const buttonStyle = { boxShadow: 'none' };
   return (
-    <nav className="col ">
-      <ul className="list-none flex gap-3">
+    <nav className={`col ${className}`}>
+      <ul className="list-none flex gap-2 lg:gap-3">
         <li>
           <Button severity="help" label="Skills" icon="pi pi-star" style={buttonStyle} text />
         </li>
