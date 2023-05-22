@@ -5,6 +5,10 @@ type SectionProps = {
   className?: string;
 };
 
-export default function Section({ children, className }: SectionProps) {
-  return <section className={`${className}`}>{children}</section>;
+export default function Section({ children, className, ...props }: SectionProps) {
+  return (
+    <section className={`${className}`} {...props}>
+      {children}
+    </section>
+  );
 }

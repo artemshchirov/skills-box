@@ -5,6 +5,10 @@ type PageSectionProps = {
   className?: string;
 };
 
-export default function PageSection({ children, className }: PageSectionProps) {
-  return <section className={`px-4 py-6 md:p-6 lg:p-8 w-full ${className}`}>{children}</section>;
+export default function PageSection({ children, className, ...props }: PageSectionProps) {
+  return (
+    <section className={`px-4 py-6 md:p-6 lg:p-8 w-full ${className}`} {...props}>
+      {children}
+    </section>
+  );
 }

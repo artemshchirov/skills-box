@@ -58,7 +58,7 @@ export default function About() {
   };
   return (
     <PageSection className="grid grid-nogutter surface-ground">
-      <Section className="col-12 md:col-6 p-6 sm:pt-0 text-center md:text-left flex align-items-center">
+      <Section className="col-12 md:col-6 p-6 pt-0 md:pt-6 text-center md:text-left flex align-items-center">
         <div>
           <span className="block text-5xl font-bold mb-1">
             What is <br /> Skills Box?

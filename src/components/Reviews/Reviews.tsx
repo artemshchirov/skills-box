@@ -20,13 +20,6 @@ export default function Reviews() {
             <Container className="flex">
               <Container className="flex flex-column w-9 pr-4">
                 <p className="mb-4 text-900 font-medium">{review.author}</p>
-                <Rating
-                  className="mb-3"
-                  value={review.rating}
-                  cancel={false}
-                  onIcon={<i className="pi pi-star-fill text-yellow-500 mr-1" />}
-                  offIcon={<i className="pi pi-star-fill text-300" />}
-                />
                 <p className="text-700 m-0 p-0 line-height-3">{review.description}</p>
               </Container>
               <Container className="w-3  flex align-items-start justify-content-end">

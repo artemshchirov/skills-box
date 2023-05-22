@@ -10,7 +10,7 @@ import PageSection from '@/components/PageSection';
 export default function Certificate() {
   return (
     <PageSection className="grid grid-nogutter surface-ground">
-      <Section className="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+      <Section className="col-12 md:col-6 p-6 pt-0 md:pt-6 text-center md:text-left flex align-items-center">
         <div>
           <h1 className="block text-5xl font-bold mb-1 mb-3">Gift Certificate</h1>
           <p className="mt-0 mb-4 text-700 line-height-3 mb-4">

@@ -1,8 +1,9 @@
 import 'primereact/resources/themes/viva-light/theme.css';
+// import 'primereact/resources/themes/viva-dark/theme.css';
 import React from 'react';
 // NOTE dark theme
-// import 'primereact/resources/themes/viva-dark/theme.css';
 import { Poppins } from 'next/font/google';
+import PrimeReact from 'primereact/api';
 import Header from '@/components/Header/Header';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
@@ -17,6 +18,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  PrimeReact.ripple = true;
   return (
     <html lang="en">
       <body
