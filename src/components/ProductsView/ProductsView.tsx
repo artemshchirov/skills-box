@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 
 import Image from 'next/image';
 import { Button } from 'primereact/button';
-import Container from '@/components/Container';
-import Section from '@/components/Section';
+import Container from '@/uikit/Container';
+import PageSection from '@/uikit/PageSection';
 import productService from './ProductService';
 import type { Product } from './productsData';
 
@@ -17,7 +17,7 @@ export default function ProductsView() {
   }, []);
 
   return (
-    <Section className="surface-section px-4 py-8 md:px-6 w-full">
+    <PageSection className="surface-ground">
       <div className="grid -mt-3 -ml-3 -mr-3">
         {products.map((product) => (
           <div key={product.id} className="col-12 md:col-6 lg:col-3 mb-5 md:mb-0">
@@ -71,6 +71,6 @@ export default function ProductsView() {
           </div>
         ))}
       </div>
-    </Section>
+    </PageSection>
   );
 }

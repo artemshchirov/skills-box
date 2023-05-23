@@ -10,6 +10,8 @@
     "lint": "eslint --fix src/**/*.{tsx,ts} --config ./.eslintrc.json --ignore-path ./.gitignore"
   },
   "dependencies": {
+    "@types/classnames": "^2.3.1",
+    "classnames": "^2.3.2",
     "next": "13.4.2",
     "primeflex": "^3.3.0",
     "primeicons": "^6.0.1",

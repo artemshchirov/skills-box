@@ -1,18 +1,17 @@
 'use client';
 
 import React from 'react';
-import { Rating } from 'primereact/rating';
 import Image from 'next/image';
-import Section from '@/components/Section';
 import productsData from '@/components/ProductsView/productsData';
 import productTemplate from '@/assets/space.jpg';
-import Container from '../Container';
+import PageSection from '@/uikit/PageSection';
+import Container from '@/uikit/Container';
 import Review from './Review';
 import reviews from './reviewsData';
 // TODO rename ReviewsView
 export default function Reviews() {
   return (
-    <Section className="surface-ground px-4 py-8 md:px-6">
+    <PageSection className="surface-section">
       <h2 className="text-900 font-medium text-2xl mb-5">Your Voice</h2>
       <ul className="list-none grid -mt-3 -ml-3 -mr-3">
         {reviews.map((review) => (
@@ -20,13 +19,6 @@ export default function Reviews() {
             <Container className="flex">
               <Container className="flex flex-column w-9 pr-4">
                 <p className="mb-4 text-900 font-medium">{review.author}</p>
-                <Rating
-                  className="mb-3"
-                  value={review.rating}
-                  cancel={false}
-                  onIcon={<i className="pi pi-star-fill text-yellow-500 mr-1" />}
-                  offIcon={<i className="pi pi-star-fill text-300" />}
-                />
                 <p className="text-700 m-0 p-0 line-height-3">{review.description}</p>
               </Container>
               <Container className="w-3  flex align-items-start justify-content-end">
@@ -57,6 +49,6 @@ export default function Reviews() {
           </Review>
         ))}
       </ul>
-    </Section>
+    </PageSection>
   );
 }

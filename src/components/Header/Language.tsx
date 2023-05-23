@@ -14,7 +14,11 @@ type Country = {
   code: string;
 };
 
-export default function Language() {
+type LanguageProps = {
+  className?: string;
+};
+
+export default function Language({ className }: LanguageProps): JSX.Element {
   const countries: Country[] = [
     { name: 'Hebrew', code: 'HE' },
     { name: 'English', code: 'EN' },
@@ -81,7 +85,7 @@ export default function Language() {
       placeholder="Choose a Language"
       valueTemplate={selectedCountryTemplate}
       itemTemplate={countryOptionTemplate}
-      className="w-min h-min"
+      className={`w-min h-min ${className}`}
     />
   );
 }

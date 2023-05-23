@@ -29,13 +29,29 @@
         "allowSingleExtends": true
       }
     ],
-    "@typescript-eslint/no-empty-function": ["error", { "allow": ["arrowFunctions"] }],
+    "@typescript-eslint/no-empty-function": [
+      "error",
+      {
+        "allow": ["arrowFunctions"]
+      }
+    ],
     "import/no-absolute-path": "error",
-    "import/no-useless-path-segments": ["warn", { "noUselessIndex": true }],
+    "import/no-useless-path-segments": [
+      "warn",
+      {
+        "noUselessIndex": true
+      }
+    ],
     "import/no-deprecated": "warn",
     "import/no-unresolved": "off",
     "import/first": "error",
-    "import/extensions": ["warn", "never", { "svg": "always" }],
+    "import/extensions": [
+      "warn",
+      "never",
+      {
+        "svg": "always"
+      }
+    ],
     "import/newline-after-import": "warn",
     "@typescript-eslint/consistent-type-imports": "error",
     "import/order": [
@@ -44,7 +60,12 @@
         "groups": ["builtin", "external", "internal", "parent", "sibling", "index"]
       }
     ],
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/jsx-filename-extension": [
+      2,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off"
   },

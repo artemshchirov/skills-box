@@ -3,7 +3,7 @@
 import React from 'react';
 import { ProgressSpinner } from 'primereact/progressspinner';
 
-export default function BasicDemo() {
+export default function Loading() {
   return (
     <div className="card flex justify-content-center">
       <ProgressSpinner />

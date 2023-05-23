@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import Section from '@/components/Section';
-import Container from '@/components/Container';
+import PageSection from '@/uikit/PageSection';
+import Container from '@/uikit/Container';
 import Steps from './Steps';
 import Step from './Step';
 
@@ -45,7 +45,7 @@ const steps: Step[] = [
 
 export default function Info() {
   return (
-    <Section className="surface-section px-4 py-8 md:px-6">
+    <PageSection className="surface-section">
       <Container className="flex flex-wrap">
         <Steps className="flex flex-wrap">
           {steps.map((step) => (
@@ -62,6 +62,6 @@ export default function Info() {
           ))}
         </Steps>
       </Container>
-    </Section>
+    </PageSection>
   );
 }

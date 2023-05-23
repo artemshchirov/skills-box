@@ -23,7 +23,7 @@ const reviews: Review[] = [
     id: 1,
     author: 'Wade Warren',
     description:
-      'Pellentesque eu tincidunt tortor aliquam nulla facilisi. Nunc consequat interdum varius sit amet mattis. 🔥',
+      'Pellentesque eu tincidunt tortor aliquam nulla facilisi. Nunc consequat interdum varius sit mattis. 🔥',
     rating: 5,
     image: 'https://blocks.primereact.org/demo/images/blocks/ecommerce/review/review-1-3.png',
     product: 'Black Watch',
