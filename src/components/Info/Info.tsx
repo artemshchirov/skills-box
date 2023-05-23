@@ -1,8 +1,8 @@
 'use client';
 
 import React from 'react';
-import PageSection from '@/components/PageSection';
-import Container from '@/components/Container';
+import PageSection from '@/uikit/PageSection';
+import Container from '@/uikit/Container';
 import Steps from './Steps';
 import Step from './Step';
 

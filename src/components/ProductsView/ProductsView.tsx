@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react';
 
 import Image from 'next/image';
 import { Button } from 'primereact/button';
-import Container from '@/components/Container';
-import PageSection from '@/components/PageSection';
+import Container from '@/uikit/Container';
+import PageSection from '@/uikit/PageSection';
 import productService from './ProductService';
 import type { Product } from './productsData';
 

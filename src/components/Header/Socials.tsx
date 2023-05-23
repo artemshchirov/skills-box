@@ -2,7 +2,7 @@
 
 import { Button } from 'primereact/button';
 import React from 'react';
-import Container from '../Container';
+import Container from '../../uikit/Container';
 
 type SocialsProps = {
   className?: string;

@@ -3,7 +3,7 @@ import React from 'react';
 
 type TitleProps = {
   Tag?: React.ElementType;
-  className: string;
+  className?: string;
   children: React.ReactNode;
 } & DetailedHTMLProps<HTMLAttributes<HTMLHeadingElement>, HTMLHeadingElement>;
 

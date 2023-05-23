@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import PageSection from '@/components/PageSection';
+import PageSection from '@/uikit/PageSection';
 import questionsData from './questionsData';
 
 export default function Questions() {

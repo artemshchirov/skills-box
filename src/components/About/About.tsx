@@ -5,8 +5,8 @@ import Image from 'next/image';
 import { Galleria } from 'primereact/galleria';
 import type { GalleriaResponsiveOptions } from 'primereact/galleria';
 import { Button } from 'primereact/button';
-import Section from '@/components/Section';
-import PageSection from '@/components/PageSection';
+import Section from '@/uikit/Section';
+import PageSection from '@/uikit/PageSection';
 import PhotoService from './GalleriaService';
 import type { PhotoData } from './GalleriaService';
 

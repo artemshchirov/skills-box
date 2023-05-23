@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import { Rating } from 'primereact/rating';
 import Image from 'next/image';
 import productsData from '@/components/ProductsView/productsData';
 import productTemplate from '@/assets/space.jpg';
-import PageSection from '@/components/PageSection';
-import Container from '@/components/Container';
+import PageSection from '@/uikit/PageSection';
+import Container from '@/uikit/Container';
 import Review from './Review';
 import reviews from './reviewsData';
 // TODO rename ReviewsView

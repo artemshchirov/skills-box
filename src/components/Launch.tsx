@@ -4,8 +4,8 @@ import React from 'react';
 import Image from 'next/image';
 import { Button } from 'primereact/button';
 import launchImage from '@/assets/space.jpg';
-import Section from '@/components/Section';
-import PageSection from '@/components/PageSection';
+import Section from '@/uikit/Section';
+import PageSection from '@/uikit/PageSection';
 
 export default function Launch() {
   return (
