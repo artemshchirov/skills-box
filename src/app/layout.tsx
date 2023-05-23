@@ -5,6 +5,7 @@ import React from 'react';
 import { Poppins } from 'next/font/google';
 import PrimeReact from 'primereact/api';
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 import 'primeflex/primeflex.css';
 import 'primeicons/primeicons.css';
 import 'primereact/resources/primereact.min.css';
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

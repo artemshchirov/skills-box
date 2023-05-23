@@ -1,4 +1,5 @@
 import React from 'react';
+import Text from '@/uikit/Text';
 import Container from '../../uikit/Container';
 
 type PhoneProps = {
@@ -9,10 +10,10 @@ type PhoneProps = {
 export default function Phone({ number, className }: PhoneProps): JSX.Element {
   return (
     <Container className={`${className}`}>
-      <p className="col flex align-items-center gap-2">
+      <div className="col flex align-items-center gap-2">
         <i className="pi pi-phone" />
-        {number}
-      </p>
+        <Text>{number}</Text>
+      </div>
     </Container>
   );
 }

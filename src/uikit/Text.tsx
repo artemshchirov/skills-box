@@ -1,27 +1,24 @@
 import React from 'react';
 import type { DetailedHTMLProps, HTMLAttributes } from 'react';
-import cn from 'classnames';
+
+type FontWeight = 'light' | 'normal' | 'medium' | 'semibold' | 'bold';
+type FontSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl';
 
 type TextProps = {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: FontSize;
+  weight?: FontWeight;
   children: React.ReactNode;
 } & DetailedHTMLProps<HTMLAttributes<HTMLParagraphElement>, HTMLParagraphElement>;
 
 export default function Text({
   className,
-  size = 'md',
+  size = 'base',
+  weight = 'normal',
   children,
   ...props
 }: TextProps): JSX.Element {
-  const textSizeClass = cn({
-    'text-sm': size === 'sm',
-    'text-base': size === 'md',
-    'text-lg': size === 'lg',
-    'text-xl': size === 'xl',
-  });
-
   return (
-    <p className={`${className} ${textSizeClass}`} {...props}>
+    <p className={`text-${size} font-${weight} ${className}`} {...props}>
       {children}
     </p>
   );
